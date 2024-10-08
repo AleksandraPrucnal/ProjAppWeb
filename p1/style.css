@@ -1,5 +1,5 @@
 body {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
 	background: #ffffff;
 	margin: auto;
 	max-width:1200px;
@@ -7,12 +7,17 @@ body {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 48px;
 }
 
 h2 {
+    font-size: 32px;
+}
+
+h3 {
     font-size: 24px;
 }
+
 .top {
 	background: #A9D9D0;
 	border: 3px solid #027373;
@@ -31,7 +36,7 @@ h2 {
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 0 40px;
     grid-auto-rows: minmax(100px, auto);
     padding: 10px 100px;
   }
@@ -41,22 +46,17 @@ h2 {
     max-width: 100%;
     height: auto;
   }
-  
-
-.opis {
-	margin:0px 15px;
+  .fixed-height {
+    width: 100%; /* Ustaw na 100% szerokości kolumny */
+    height: 200px;
 }
+  
 
 a {
 	color: #027373;
 	font-size: 18px;
 }
 
-.float-left {
-    float: left;
-    margin: 0 15px 15px 0;
-    width: 500px;
-}
 
 .clear {
     clear: both;
