@@ -1,25 +1,23 @@
 var computed = false;
 var decimal = 0;
 
-function convert(entryform, form, to)
-{
-    convertfrom = from.selectedIndex;
-    convertto = to.selectedIndex;
+function convert(entryform, measureField, productField) {
+    // Pobranie wartości z pól formularza
+    const inputValue = parseFloat(entryform.input.value);  // Wartość wpisana przez użytkownika
+    const unitFactor = parseFloat(measureField.value);     // Wartość wybranej jednostki (ml/l)
+    const productFactor = parseFloat(productField.value);  // Wartość wybranego produktu (cena)
 
-    conversionFactors = [1, 1000];
-    productFactors = [1.28, 0.78, 0.57];
-
-    const inputValue = parseFloat(entryform.input.value); 
-
-    if (from.name === "measure1") {
-        result = (inputValue * conversionFactors[convertfrom]) / conversionFactors[convertto];
-    } 
-    else 
-    {
-        result = (inputValue * productFactors[convertfrom]) / productFactors[convertto];
+    // Sprawdzamy, czy użytkownik wpisał poprawne dane
+    if (isNaN(inputValue) || unitFactor === "" || productFactor === "") {
+        alert("Proszę wypełnić wszystkie pola poprawnymi wartościami.");
+        return;
     }
 
-    entryform.display.value = result; 
+    // Przeliczamy ilość w wybranej jednostce na koszt produktu
+    const result = inputValue * unitFactor * productFactor;
+
+    // Wyświetlamy wynik w polu "display"
+    entryform.display.value = result.toFixed(2); // Zaokrąglenie wyniku do dwóch miejsc po przecinku
 }
 
 function addChar (input, character)
@@ -50,5 +48,5 @@ function clear(form)
 
 function changeBackground(hexNumber)
 {
-    document.body.style.backgroundColor = hexNumber; <!-- bgColor nie działał -->
+    document.body.style.backgroundColor = hexNumber;
 }
