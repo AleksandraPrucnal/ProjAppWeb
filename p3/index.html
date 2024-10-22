@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="kolorujtlo.js" type="text/javascript"></script>
+    <script src="timedate.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+	<meta http-equiv="Content-Language" content="pl" />
+	<meta name="Author" content="Aleksandra Prucnal" />
+	<title>Hodowla żółwia wodnego</title>
+</head>
+
+<body onload="startclock()">
+
+    <div id="animacjaTestowa1" class="test-block">Kliknij, a się powiększę</div>
+    <script>
+        $("#animacjaTestowa1").on("click", function(){
+            $(this).animate({
+                width: "500px",
+                opacity: 0.4,
+                fontsize: "3em",
+                borderwidth: "10px"
+            }, 1500);
+        });
+    </script>
+
+    <form method="post" name="background" class="right-container">
+        <div class="clock">
+            <h4> Aktualny czas:</h4>
+            <div id="data"></div>
+            <div id="zegarek"></div>
+        </div>        
+        <input type="button" value="biały" onclick="changeBackground('#FFFFFF')" class="color-button white">
+        <input type="button" value="żółty" onclick="changeBackground('#DAFDBA')" class="color-button yellow">
+        <input type="button" value="turkusowy" onclick="changeBackground('#6DB1A8')" class="color-button turquoise">
+        <input type="button" value="ciemny" onclick="changeBackground('#237272')" class="color-button dark">
+    </form>
+
+	<div class="top">
+		<h1>Hodowla żółwia wodnego</h1>
+	</div>
+	
+	<nav class="menu">
+		<a href="index.html">Strona Główna</a>   |
+        <a href="gatunki.html">Gatunki żółwi wodnych</a>    | 
+        <a href="zywienie.html">Żywienie</a>    |
+        <a href="terrarium.html">Terrarium</a>  |
+        <a href="oswietlenie.html">Oświetlenie</a>  |
+        <a href="ogrzewanie.html">Ogrzewanie</a>    |
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+	
+    <div class="wrapper">
+        <div class="trzy kolumny" style="grid-column: 1 / 4;">
+            <h2>Dlaczego żółwie?</h2>
+            <p class="justified">Żółwie wodne są popularnymi zwierzętami domowymi zarówno wśród dzieci, jak i dorosłych. Gady te są stosunkowo łatwe w pielęgnacji i przy odpowiedniej dla gatunku hodowli i zdrowej diecie mogą żyć nawet 50 lat.</p>
+        </div>
+        <div class="jedna kolumna lewa" style="grid-column: 1;">
+            <img src="zolw1.jpg" alt="Żółw wodny">
+        </div>
+        <div class="dwie kolumny prawe" style="grid-column: 2 / 4;">
+            <p class="justified">Żółw jest zwierzakiem, który może przynosić radość przez długi czas. Stanowi wspaniały obiekt obserwacji – może godzinami wygrzewać się najlepiej w promieniach słońca, a międzyczasie wspaniale pływa. Piękne terrarium może być niezwykłą ozdobą każdego domu.
+                Ale uwaga: chociaż uważa się je za łatwe w utrzymaniu, żółwie są dosyć wymagające, jeśli chodzi o odżywianie.</p>
+        </div>
+        <div class="trzy kolumny" style="grid-column: 1 / 4;">
+            <p class="justified">Na czym polega hodowla żółwi? Co musisz zrobić, aby trzymać je w domu (jeśli to możliwe) i w ogrodzie? Przejdź do artykułów umieszczonych na stronie.</p>
+        </div>
+    </div>
+
+	
+	<footer class="footer clear">
+        <p>&copy; 2024 Hodowla żółwia wodnego</p>
+    </footer>
+    
+
+</body>
+
+</html>
