@@ -5,12 +5,41 @@
 	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="kolorujtlo.js" type="text/javascript"></script>
+    <script src="timedate.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
 	<meta http-equiv="Content-Language" content="pl" />
 	<meta name="Author" content="Aleksandra Prucnal" />
 	<title>Hodowla żółwia wodnego</title>
 </head>
 
-<body>
+<body onload="startclock()">
+
+    <div id="animacjaTestowa1" class="test-block">Kliknij, a się powiększę</div>
+    <script>
+        $("#animacjaTestowa1").on("click", function(){
+            $(this).animate({
+                width: "500px",
+                opacity: 0.4,
+                fontsize: "3em",
+                borderwidth: "10px"
+            }, 1500);
+        });
+    </script>
+
+    <form method="post" name="background" class="right-container">
+        <div class="clock">
+            <h4> Aktualny czas:</h4>
+            <div id="data"></div>
+            <div id="zegarek"></div>
+        </div>        
+        <input type="button" value="biały" onclick="changeBackground('#FFFFFF')" class="color-button white">
+        <input type="button" value="żółty" onclick="changeBackground('#DAFDBA')" class="color-button yellow">
+        <input type="button" value="turkusowy" onclick="changeBackground('#6DB1A8')" class="color-button turquoise">
+        <input type="button" value="ciemny" onclick="changeBackground('#237272')" class="color-button dark">
+    </form>
+
 	<div class="top">
 		<h1>Hodowla żółwia wodnego</h1>
 	</div>
