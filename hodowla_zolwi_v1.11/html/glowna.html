@@ -4,7 +4,21 @@
         <p class="justified">Żółwie wodne są popularnymi zwierzętami domowymi zarówno wśród dzieci, jak i dorosłych. Gady te są stosunkowo łatwe w pielęgnacji i przy odpowiedniej dla gatunku hodowli i zdrowej diecie mogą żyć nawet 50 lat.</p>
     </div>
     <div class="jedna kolumna lewa" style="grid-column: 1;">
-        <img src="zolw1.jpg" alt="Żółw wodny">
+
+        <!-- skrypt powiekszajacy -->
+        <div id="animacjaTestowa1"><img src="zolw1.jpg" alt="Żółw wodny"></div>
+        <script>
+            $("#animacjaTestowa1").on("click", function(){
+                $(this).animate({
+                    width: "600px",
+                    opacity: 0.4,
+                    fontsize: "3em",
+                    borderwidth: "10px"
+                }, 1500);
+            });
+        </script>
+    
+        
     </div>
     <div class="dwie kolumny prawe" style="grid-column: 2 / 4;">
         <p class="justified">Żółw jest zwierzakiem, który może przynosić radość przez długi czas. Stanowi wspaniały obiekt obserwacji – może godzinami wygrzewać się najlepiej w promieniach słońca, a międzyczasie wspaniale pływa. Piękne terrarium może być niezwykłą ozdobą każdego domu.

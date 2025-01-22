@@ -11,10 +11,10 @@ require_once 'contact.php';
 
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="kolorujtlo.js" type="text/javascript"></script>
-    <script src="timedate.js" type="text/javascript"></script>
+    <script src="js/kolorujtlo.js" type="text/javascript"></script>
+    <script src="js/timedate.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<meta http-equiv="Content-Language" content="pl" />
 	<meta name="Author" content="Aleksandra Prucnal" />
@@ -22,19 +22,6 @@ require_once 'contact.php';
 </head>
 
 <body onload="startclock()">
-
-    <div id="animacjaTestowa1" class="test-block">Kliknij, a się powiększę</div>
-    <script>
-        $("#animacjaTestowa1").on("click", function(){
-            $(this).animate({
-                width: "500px",
-                opacity: 0.4,
-                fontsize: "3em",
-                borderwidth: "10px"
-            }, 1500);
-        });
-    </script>
-
 
     <form method="post" name="background" class="right-container">
         <div class="clock">
@@ -62,7 +49,7 @@ require_once 'contact.php';
         <a href="index.php?idp=oswietlenie">Oświetlenie</a> |
         <a href="index.php?idp=ogrzewanie">Ogrzewanie</a> |
         <a href="index.php?idp=filmy">Filmy</a> |
-        <a href="index.php?idp=kontakt">Kontakt</a> |
+        <!-- <a href="index.php?idp=kontakt">Kontakt</a> | -->
         <a href="index.php?idp=sklep" class="color-button white">SKLEP</a>
         <a href="index.php?idp=koszyk" class="color-button dark">KOSZYK</a>
         
