@@ -1,0 +1,321 @@
+/* Ogólny styl dla panelu admina */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Nagłówki */
+h1, h2, h3 {
+    color: #027373;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+/* Nawigacja */
+.admin-nav {
+    text-align: center;
+    margin: 20px 0;
+    background-color: #6DB1A8;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.admin-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.admin-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Formularze */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+/* Formularz kategorii */
+.form-category {
+    margin-top: 20px;
+}
+
+/* Lista kategorii */
+.category-tree {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-tree .category-item {
+    margin: 5px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.category-tree .category-item::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #027373;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Przyciski */
+.btn {
+    padding: 10px 20px;
+    background-color: #027373;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #025757;
+}
+
+.btn-danger {
+    background-color: #ff4d4d;
+}
+
+.btn-danger:hover {
+    background-color: #cc0000;
+}
+
+/* Tabele */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #6DB1A8;
+    color: white;
+    text-align: center;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Komunikaty */
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.success-message {
+    color: greenyellow;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+/* Formularz dla podstron */
+.form-page {
+    margin-top: 20px;
+}
+
+/* Pole tekstowe z większą wysokością dla treści */
+.form-page textarea {
+    height: 300px;
+}
+
+/* Przyciski w podstronach */
+.form-page .btn {
+    margin-right: 10px;
+}
+
+/* Tabele podstron */
+.table-pages {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table-pages th, .table-pages td {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.table-pages th {
+    background-color: #6DB1A8;
+    color: white;
+    text-align: center;
+}
+
+.table-pages tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-pages tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Sekcja nawigacji dla podstron */
+.page-navigation {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.page-navigation a {
+    margin: 0 10px;
+    color: #027373;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.page-navigation a:hover {
+    text-decoration: underline;
+}
+
+/* Komunikaty w podstronach */
+.page-message {
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.page-message.success {
+    color: greenyellow;
+}
+
+.page-message.error {
+    color: red;
+}
+/* Tabele produktów */
+.table-products {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table-products th, .table-products td {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.table-products th {
+    background-color: #6DB1A8;
+    color: white;
+    text-align: center;
+}
+
+.table-products tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-products tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Obrazek produktu w tabeli */
+.table-products .product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Formularze produktów */
+.form-product {
+    margin-top: 20px;
+}
+
+.form-product .form-group {
+    margin-bottom: 15px;
+}
+
+.form-product label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-product input, .form-product textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+/* Komunikaty */
+.product-message {
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.product-message.success {
+    color: yellowgreen;
+}
+
+.product-message.error {
+    color: red;
+}
